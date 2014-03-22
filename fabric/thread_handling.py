@@ -22,4 +22,6 @@ class ThreadHandler(object):
     def raise_if_needed(self):
         if self.exception:
             e = self.exception
-            raise e[0], e[1], e[2]
+            exp = e[0](e[1])
+            exp.__traceback__ = e[2]
+            raise exp

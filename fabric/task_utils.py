@@ -78,7 +78,7 @@ def parse_kwargs(kwargs):
     hosts = []
     roles = []
     exclude_hosts = []
-    for key, value in kwargs.iteritems():
+    for key, value in kwargs.items():
         if key == 'host':
             hosts = [value]
         elif key == 'hosts':
